@@ -1,0 +1,30 @@
+<article class="listing">
+  <img src={{ item.image }} alt="">
+  <div class="details">
+    <h3>{{ item.name }}</h3>
+    <div class="detail price">
+      <span>Price: </span> {{price-formatter item.price }}
+    </div>
+    <div class="detail discount">
+      {{#if (compare item.price '!=' item.discounted)}}
+        <span>Discounted Price: </span> {{price-formatter item.discounted }}
+      {{/if}}
+    </div>
+    <div class="detail quantity">
+      <span>Quantity: </span>{{ item.quantity }}
+    </div>
+    <div class="detail promos">
+      {{#if item.promotion}}
+        <span>Promotion: </span> {{ item.promotion }}
+      {{/if}}
+    </div>
+    <div class="detail total">
+      <span>Original Amount: </span> {{price-formatter item.amount }}
+    </div>
+    <div class="detail discounted">
+      {{#if (compare item.amount '!=' item.total)}}
+        <span>Discounted Amount: </span> {{price-formatter item.total }}
+      {{/if}}
+    </div>
+  </div>
+</article>

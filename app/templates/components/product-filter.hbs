@@ -1,0 +1,11 @@
+<div class="es-control">
+  <div class="es-input">
+    {{input
+      value=this.value
+      key-up=(action "handleFilterEntry")
+      class="light"
+      placeholder="Search Product..."
+    }}
+  </div>
+</div>
+{{yield this.results}}

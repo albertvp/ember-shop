@@ -1,0 +1,9 @@
+<h2>Cart Items</h2>
+
+<ul>
+  {{#each model as |item|}}
+    <ul><CartItem @item={{item}} @quantity=3/></ul>
+  {{/each}}
+</ul>
+
+<button {{action "goToCheckout"}}>Proceed to Checkout</button>

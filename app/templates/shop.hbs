@@ -1,0 +1,10 @@
+<h2>Products in stock</h2>
+<br/>
+
+<ProductFilter @filter={{action "filterByName"}} as |filteredProducts|>
+  <ul>
+    {{#each filteredProducts as |product|}}
+      <ul><ProductSelector @product={{product}}/></ul>
+    {{/each}}
+  </ul>
+</ProductFilter>

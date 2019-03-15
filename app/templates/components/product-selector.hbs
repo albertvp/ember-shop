@@ -1,0 +1,19 @@
+<article class="listing">
+  <img src={{ product.image }} alt="">
+  <div class="details">
+    <h3>{{ product.name }}</h3>
+    <div class="detail price">
+      <span>Price: </span> {{price-formatter product.price }}
+    </div>
+    <div class="detail grid">
+      {{x-select
+        canSearch=false
+        openOnFocus=true
+        model=quantities
+        placeholder="Quantity"
+        onSelect=(action "setQuantity")
+      }}
+      <button {{action "addToCart"}}>Add to Cart</button>
+    </div>
+  </div>
+</article>
